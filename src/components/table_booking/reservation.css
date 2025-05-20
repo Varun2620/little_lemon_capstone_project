@@ -1,0 +1,80 @@
+.reservationContainer{
+    position: relative;
+    top: 20vh;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.formContainer{
+    display: flex;
+    width: 144vh;
+    height: 50vh;
+    font-size: 1rem;
+    margin: 0vh auto;
+    font-family: 'Markazi Text', sans-serif;
+}
+
+.reservationForm{
+    width: 100%;
+    height: max-content;
+}
+
+.formContent{
+    display: flex;
+    flex-direction: column;
+    width: 70vh;
+    align-items: flex-start;
+    justify-content: center;
+    height: 50vh;
+    margin: 0vh auto;
+    font-size: 1.7em;
+}
+
+.formContent input, select{
+    width: fit-content;
+    height: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Karla', sans-serif;
+}
+
+.formBtn{
+    width: 25vh;
+    height: 7vh;
+    margin: 2vh auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 20vh;
+    font-size: 2rem;
+    border-radius: 1.6vh;
+    border: none;
+    background-color: #F4CE14;
+    color: #333333;
+    font-family: 'Markazi Text', sans-serif;
+}
+
+.errorMsg{
+    color: red;
+    font-size: 1.3rem;
+    position: relative;
+    width: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0vh auto;
+}
+
+label{
+    margin: 2vh 0vh;
+}
+
+.formData{
+    display: flex;
+    width: 45vh;
+    justify-content: space-around;
+    align-items: center;
+}

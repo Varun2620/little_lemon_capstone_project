@@ -1,0 +1,61 @@
+.aboutContainer{
+    width: 144vh;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    top: 20vh;
+    margin: 0vh auto;
+}
+
+.aboutContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vh;
+    height: 50vh;
+}
+
+.aboutLeft{
+    width: 40vh;
+    height: 56.8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 2vh 1vh;
+}
+
+.aboutLeft h1{
+    font-size: 2rem;
+}
+
+.aboutLeft h3{
+    margin: 2vh 0vh;
+}
+
+.aboutRight{
+    position: relative;
+    width: 50vh;
+    height: 46.8vh;
+    left: 5vh;
+}
+
+.img1{
+    display: block;
+    width: 40vh;
+    height: 45vh;
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.img2{
+    position: absolute;
+    top: -7vh;
+    width: 40vh;
+    height: 45vh;
+    left: 15vh;
+    z-index: 2;
+    object-fit: cover;
+}

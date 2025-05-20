@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './navBar.css'
-import logo from '../../assets/react.svg'
+import logo from '../../assets/Logo.svg'
 
 function navBar() {
   return (
@@ -12,6 +12,7 @@ function navBar() {
             <li><Link to='/' className='links'>Home</Link></li>
             <li><Link to='/about' className='links'>About</Link></li>
             <li><Link to='/reservation' className='links'>Reservation</Link></li>
+            <li><Link to='/menu' className='links'>Menu</Link></li>
             <li><Link to='/onlineOrder' className='links'>Online Order</Link></li>
             <li><Link to='/login' className='links'>Login</Link></li>
           </ul>

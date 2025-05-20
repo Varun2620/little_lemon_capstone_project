@@ -1,0 +1,54 @@
+.menuContainer{
+    width: 98vw;
+    height: max-content;
+}
+
+.menuContent{
+    width: 144vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 10vh auto 0vh;
+    flex-direction: column;
+}
+
+.foodContainer{
+    width: 70vh;
+    height: 25vh;
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    margin: 3vh auto;
+}
+
+.foodContainer img{
+    width: 30vh;
+    height: 25vh;
+    object-fit: cover;
+    border-radius: 1.6vh;
+}
+
+.foodText{
+    margin-left: 4vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 25vh;
+}
+
+.menuBtn{
+    display: flex;
+    width: 10vh;
+    height: 3.3vh;
+    align-items: center;
+    border-radius: 1.6vh;
+    justify-content: center;
+    border: none;
+    background: #F4CE14;
+    color: #333333;
+}
+
+.menuContent h3:last-child{
+    margin: 4vh auto;
+}

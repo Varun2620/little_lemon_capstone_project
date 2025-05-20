@@ -1,0 +1,74 @@
+.dishContainer{
+    width: 98vw;
+    height: fit-content;
+    margin-top: 10vh;
+}
+
+.dishContent{
+    width: 144vh;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0vh auto;
+    flex-direction: column;
+}
+
+.dishDetails{
+    width: 120vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.dishImg{
+    width: 90%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0vh auto;
+    border-radius: 1.6vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+.dishDetails h3{
+    margin: 2vh 0vh;
+    font-family: 'Markazi Text', sans-serif;
+    font-size: 2rem;
+}
+
+.dishDetails p{
+    margin-bottom: 2vh;
+    font-family: 'Karla', sans-serif;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.dishDetails p strong{
+    font-family: 'Markazi Text';
+    font-size: 1.5rem;
+    margin-right: 2vh;
+}
+
+.cartBtn{
+    width: 25vh;
+    height: 7vh;
+    display: flex;
+    font-family: 'Karla', sans-serif;
+    font-size: 1.3rem;
+    background-color: #F4CE14;
+    color: #333333;
+    border-radius: 1.6vh;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    margin: 2vh 0vh;
+}
+
+.cartBtn img{
+    filter: invert(1);
+    margin: 0vh 1vh;
+}

@@ -1,0 +1,95 @@
+.specials{
+    position: relative;
+    top: 20vh;
+    display: flex;
+    width: 85.8vh;
+    height: 55.5vh;
+    align-items: center;
+    flex-direction: column;
+    margin: 0vh auto;
+}
+
+.specialsContent{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    top: 5vh;
+    position: relative;
+}
+
+.head{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 8vh;
+    font-size: 2rem;
+}
+
+.menuBtn{
+    width: 20vh;
+    height: 6vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.6vh;
+    border: none;
+    background: #F4CE14;
+    color: #333333;
+}
+
+.card{
+    width: 26.5vh;
+    height: 43.9vh;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid;
+    border-radius: 1.6vh 1.6vh 0vh 0vh;
+}
+
+.foodHead{
+    display: flex;
+    width: 100%;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2vh 0vh;
+    height: 2.5vh;
+}
+
+.foodHead h3{
+    font-size: 1rem;
+    margin-left: 1vh;
+}
+
+.foodHead p{
+    margin-right: 1vh;
+}
+
+.foodImg{
+    width: 100%;
+    height: 18.5vh;
+    object-fit: cover;
+    border-top-right-radius: 1.6vh;
+    border-top-left-radius: 1.6vh;
+}
+
+.card p{
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+    margin: 0vh 1vh;
+    align-items: center;
+    height: 12vh;
+}
+
+.orderBtn{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    top: 4vh;
+    background: transparent;
+    border: none;
+    padding-left: 1vh;
+}
