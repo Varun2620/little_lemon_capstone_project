@@ -61,7 +61,7 @@ function CreditCard() {
                 {({errors, touched, isSubmitting})=>(
                     <Form className='cardForm'>
                         <div className="cardData">
-                            <label htmlFor='holderName'>Name of the holder:</label>
+                            <label htmlFor='holderName' className='userLabel'>Name of the holder:</label>
                             <Field type='text' name='holderName' className='cardText' placeholder='Enter the name of the holder' />
                         </div>
                         {
@@ -71,7 +71,7 @@ function CreditCard() {
                         }
                         
                         <div className="cardData">
-                            <label htmlFor='cardNumber'>Number of the card:</label>
+                            <label htmlFor='cardNumber' className='userLabel'>Number of the card:</label>
                             <Field type='text' name='cardNumber' className='cardText' placeholder='Enter the card number' />
                         </div>
                         {
@@ -81,7 +81,7 @@ function CreditCard() {
                         }
                         
                         <div className="cardData">
-                            <label htmlFor='cvvNumber'>CVV:</label>
+                            <label htmlFor='cvvNumber' className='userLabel'>CVV:</label>
                             <Field type='password' name='cvvNumber' className='cvvInput' placeholder='CVV' />
                         </div>
                         {
@@ -91,7 +91,7 @@ function CreditCard() {
                         }
                         
                         <div className="cardData">
-                            <label htmlFor='expiryDate'>Expiry Date:</label>
+                            <label htmlFor='expiryDate' className='userLabel'>Expiry Date:</label>
                             <Field type='text' name='expiryDate' placeholder='MM/YY' className='dateInput' maxLength={5} />
                         </div>
                         {

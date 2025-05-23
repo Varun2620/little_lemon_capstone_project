@@ -48,7 +48,7 @@ function cod() {
                     <Form className='customerDetails'>
                         <div className="cardData">
                             <label htmlFor='name' className='userLabel'>Name:</label>
-                            <Field type='text' name='name' className='userText'/>
+                            <Field type='text' name='name' className='userText' placeholder='Name'/>
                         </div>
                         {
                             errors.name && 
@@ -58,7 +58,7 @@ function cod() {
 
                         <div className="cardData">
                             <label htmlFor='address' className='userLabel'>Address</label>
-                            <Field type='textarea' name='address' className='userText' />
+                            <Field type='textarea' name='address' className='userText' placeholder='Address' />
                         </div>
                         {
                             errors.address && 
@@ -68,7 +68,7 @@ function cod() {
 
                         <div className="cardData">
                             <label htmlFor='phoneNumber' className='userLabel'>Phone Number</label>
-                            <Field type='tel' name='phoneNumber' className='userText' />
+                            <Field type='tel' name='phoneNumber' className='userText' placeholder='Phone Number' />
                         </div>  
                         {
                             errors.phoneNumber && 
