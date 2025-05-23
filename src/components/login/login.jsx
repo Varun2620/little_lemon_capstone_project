@@ -83,9 +83,6 @@ function login() {
 
   return (
     <main className='loginContainer'>
-      <div className="imgContainer">
-        <img src={logo} alt='Little Lemon'></img>
-      </div>
       {account ? 
         <section className='accountLogin'>
           <Formik initialValues={
