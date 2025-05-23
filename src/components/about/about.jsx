@@ -1,9 +1,12 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import chef1 from '../../assets/chef1.jpg'
 import chef2 from '../../assets/chef2.jpg'
 import './about.css'
 
 function About() {
+  const navigate = useNavigate()
+
   return (
     <main className='aboutContainer'>
       <section className="aboutContent">
@@ -17,6 +20,10 @@ function About() {
             architecto voluptates cupiditate! Reprehenderit illo ipsum vel 
             quam blanditiis autem nihil laborum quis, cum praesentium consequuntur saepe.
           </p>
+          <div className="btnGroup">
+            <button onClick={ ()=> navigate('/menu') } className='aboutBtn'>Explore Our Menu</button>
+            <button onClick={ ()=> navigate('/reservation') } className='aboutBtn'>Reserve A Table</button>
+          </div>
         </article>
         <article className="aboutRight">
           <img src={chef1} alt='chef1' className='img1'></img>

@@ -1,0 +1,33 @@
+.cartMain{
+    margin-top: 10vh;
+    width: 98vw;
+    height: fit-content;
+}
+
+.cartContainer{
+    width: 144vh;
+    margin: 0vh auto;
+    height: max-content;
+}
+
+.cartContainer > h3{
+    width: 20vh;
+    margin: 0vh auto;
+}
+
+.cartContainer h3{
+    font-size: 2rem;
+    font-family: 'Markazi Text';
+}
+
+.cartItems{
+    font-size: 1.2rem;
+    font-family: 'Karla';
+    width: 70vh;
+    margin: 0vh auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 20vh;
+}

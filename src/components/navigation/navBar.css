@@ -16,6 +16,8 @@
     height: 8vh;
     align-items: center;
     justify-content: center;
+    font-size: 1rem;
+    font-family: 'Karla';
 }
 
 .logo{
@@ -25,7 +27,6 @@
     align-items: center;
     position: relative;
     left: 9vh;
-    border: 1px solid;
 }
 
 .navigationLinks{
@@ -33,7 +34,7 @@
     padding: 0vh;
     display: flex;
     justify-content: space-evenly;
-    width: 70vh;
+    width: 80vh;
     align-items: center;
 }
 

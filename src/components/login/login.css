@@ -30,6 +30,10 @@
     justify-content: center;
 }
 
+.error{
+    border-color: red;
+}
+
 .formEle label{
     font-family: 'Markazi Text';
     font-size: 1.5rem;

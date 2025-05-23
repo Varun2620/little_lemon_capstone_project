@@ -6,6 +6,7 @@ import LemonDessert from '../../assets/lemon_dessert.jpg'
 import ChickenPizza from '../../assets/chicken_pizza.jpg'
 import VegPizza from '../../assets/veg_pizza.jpg'
 import Pasta from '../../assets/pasta.jpg'
+import WhitePasta from '../../assets/whiteSauce_pasta.jpg'
 import './menu.css'
 
 function Menu() {
@@ -18,7 +19,6 @@ function Menu() {
   return (
     <main className='menuContainer'>
       <section className="menuContent">
-        <h1>Menu</h1>
         <article className='foodContainer'>
           <img src={GreekSalad} alt='Greek Salad'/>
           <div className="foodText">  
@@ -60,7 +60,7 @@ function Menu() {
               authentic as can be imagined.
             </p>
             
-            <button className='menuBtn' onClick={()=>(handleClick('limeDessert'))}>Order</button>
+            <button className='menuBtn' onClick={()=>(handleClick('lemonDessert'))}>Order</button>
           </div>
         </article>
 
@@ -105,6 +105,20 @@ function Menu() {
             </p>
             
             <button className='menuBtn' onClick={()=>(handleClick('pasta'))}>Order</button>
+          </div>
+        </article>
+
+        <article className='foodContainer'>
+          <img src={WhitePasta} alt='White Sauce Pasta'/>
+          <div className="foodText">  
+            <h3>White Sauce Pasta</h3 >
+            <p><strong>Price:</strong> $4.99</p>
+            <p>
+              Creamy white sauce pasta made with rich cheese, 
+              milk, and herbs, offering a smooth, savory flavor perfect for any meal.
+            </p>
+            
+            <button className='menuBtn' onClick={()=>(handleClick('whitePasta'))}>Order</button>
           </div>
         </article>
 

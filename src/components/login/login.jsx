@@ -3,6 +3,7 @@ import {Formik, Form, Field } from 'formik'
 import * as Yup from 'yup'
 import { useNavigate } from 'react-router-dom'
 import { isFormComplete } from '../../utils/formComplete'
+import logo from '../../assets/logo.svg'
 import './login.css'
 
 function login() {
@@ -15,61 +16,76 @@ function login() {
   
   const schema = Yup.object().shape({
     firstName: Yup.string()
-              .required('Enter your First Name')
-              .min(3, 'First Name should atleast be 3 characters long')
-              .max(20, 'First name should not exceed 20 characters'),
+              .required('*Enter your First Name')
+              .min(3, '*First Name should atleast be 3 characters long')
+              .max(20, '*First name should not exceed 20 characters'),
     
     lastName: Yup.string()
-              .min(3, 'Last Name should be 3 characters long')
-              .max(20, 'Last Name should not exceed 20 characters'),
+              .required('*Enter your Last Name')
+              .min(3, '*Last Name should be 3 characters long')
+              .max(20, '*Last Name should not exceed 20 characters'),
 
     userName: Yup.string()
-              .required('Enter your User Name')
-              .matches(namePattern, 'Username should start with a letter and should contain one digit or a special character'),
+              .required('*Enter your User Name')
+              .matches(namePattern, '*Username should start with a letter and should contain one digit or a special character'),
   
-    email: Yup.string().email('Invalid Email address')
-          .required('Enter your email address'),
+    email: Yup.string().email('*Invalid Email address')
+          .required('*Enter your email address'),
 
     password: Yup.string()
-              .required('Enter the password')
-              .min(8, 'Password should at least be 8 characters long')
-              .max(16, 'Passwords should not exceed 16 characters')
-              .matches(passwordPattern, 'Password should have a uppercase letter, a lower case letter, a digit, a special character'),
+              .required('*Enter the password')
+              .min(8, '*Password should at least be 8 characters long')
+              .max(16, '*Passwords should not exceed 16 characters')
+              .matches(passwordPattern, '*Password should have a uppercase letter, a lower case letter, a digit, a special character'),
     
     confirmPassword: Yup.string()
-              .oneOf([Yup.ref('password'), null], 'Passwords Must Match')
-              .required('Password is required'),
+              .oneOf([Yup.ref('password'), null], '*Passwords Must Match')
+              .required('*Password is required'),
 
-    gender: Yup.string().oneOf([''], 'Knidly Select the Gender')
-            .required('Kindly Select Your Gender')
+    gender: Yup.string().oneOf(['Male', 'Female', 'Prefer Not To say'], '*Knidly Select the Gender')
   }) 
 
   const accountSchema = Yup.object().shape({
-    email: Yup.string().email('Invalid Email address')
-            .required('Enter your email address'),
+    email: Yup.string().email('*Invalid Email address')
+            .required('*Enter your email address'),
 
     password: Yup.string()
-              .required('Enter the password')
-              .min(8, 'Password should at least be 8 characters long')
-              .max(16, 'Passwords should not exceed 16 characters')
-              .matches(passwordPattern, 'Password should have a uppercase letter, a lower case letter, a digit, a special character')
+              .required('*Enter the password')
+              .min(8, '*Password should at least be 8 characters long')
+              .max(16, '*Passwords should not exceed 16 characters')
+              .matches(passwordPattern, '*Password should have a uppercase letter, a lower case letter, a digit, a special character')
   })
 
   function handleClick(){
     setAccount(false)
   }
   
-  function handleForm(value){
-    if(value){
-      setMessage(' ')
-      navigate('/')
+  function handleForm(values,touched, errors, fieldCount){
+    const isFormFilled = isFormComplete(touched, errors, fieldCount)
+    
+    if(isFormFilled && account){
+      if(values.email === 'admin123@email.com' && values.password === 'Admin@123'){
+        localStorage.setItem('isLoggedIn', 'true')
+        navigate('/')
+      }else{
+        setMessage('*Invalid Credentials!! Re-enter The Credentials or Create a new Account')
+      }
+    }else if(!account){
+      if(isFormFilled){
+        navigate('/')
+      }else{
+        setMessage('*Kindly fill out the missing fields')
+      }
     }else{
-      setMessage('Kindly fill out all the fields!')
+      setMessage('*Kindly fill out the missing fields')
     }
   }
 
   return (
     <main className='loginContainer'>
+      <div className="imgContainer">
+        <img src={logo} alt='Little Lemon'></img>
+      </div>
       {account ? 
         <section className='accountLogin'>
           <Formik initialValues={
@@ -89,7 +105,7 @@ function login() {
               <Form className='accountForm'>
                 <div className="formEle">
                   <label htmlFor='email'>Email</label>
-                  <Field className='formText' type='email' name='email' placeholder='email'  />
+                  <Field className={values.email === null ? 'error' : 'formText'} type='email' name='email' placeholder='email'  />
                   {errors.email && touched.email && <p className='errorMsg'>{errors.email}</p>}
                 </div>
 
@@ -99,7 +115,7 @@ function login() {
                   {errors.password && touched.password && <p className='errorMsg'>{errors.password}</p>}
                 </div>
 
-                <button className='loginBtn' disabled={isSubmitting} onClick={()=> handleForm(isFormComplete(touched,errors, 2))}>Login</button>
+                <button className='loginBtn' disabled={isSubmitting} onClick={()=> handleForm(values, touched, errors, 2)}>Login</button>
                 {message && <p className='errorMsg'>{message}</p>}
 
                 <div className="noAccount">
@@ -131,7 +147,7 @@ function login() {
             }} 
             validationSchema={schema}
           >
-            {({errors, touched, isSubmitting})=> (
+            {({values, errors, touched, isSubmitting})=> (
               <Form className='loginForm'>
                 <div className="formEle">
                   <label htmlFor='firstName'>First Name:</label>
@@ -180,7 +196,7 @@ function login() {
                   {errors.gender && touched.gender && <p className='errorMsg'>{errors.gender}</p>}
                 </div>
                 
-                <button className='loginBtn' disabled={isSubmitting} onClick={() => handleForm(touched, errors, 7)}>Create Account</button>
+                <button className='loginBtn' disabled={isSubmitting} type='submit' onClick={() => handleForm(values,touched, errors, 7)}>Create Account</button>
                 {message && <p className='errorMsg'>{message}</p>}
               </Form>
             )}

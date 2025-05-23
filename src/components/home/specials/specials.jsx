@@ -17,7 +17,7 @@ function specials() {
     <section className='specials'>
       <article className="head">
         <h1>Specials</h1>
-        <button className='menuBtn' onClick={handleClick}>Online Menu</button>
+        <button className='specialsBtn' onClick={handleClick}>Online Menu</button>
       </article>
       <article className="specialsContent">
         <div className="card">

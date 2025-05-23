@@ -16,9 +16,11 @@
     width: 70vh;
     height: 25vh;
     display: flex;
-    /* align-items: center;
-    justify-content: center; */
     margin: 3vh auto;
+    border-radius: 1.6vh;
+    background: #495E57;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    color: #EDEFEE;
 }
 
 .foodContainer img{
@@ -35,6 +37,17 @@
     justify-content: space-around;
     align-items: flex-start;
     height: 25vh;
+}
+
+.foodText h3{
+    font-size: 1.75rem;
+    font-family: 'Markazi Text';
+    color: #F4CE14;
+}
+
+.foodText p{
+    font-family: 'Karla';
+    font-size: 0.83rem;
 }
 
 .menuBtn{

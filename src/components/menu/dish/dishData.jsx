@@ -1,6 +1,6 @@
 import GreekSalad from '../../../assets/greek_salad.jpg'
 import Bruschetta from '../../../assets/bruchetta.svg'
-import LemonDessert from '../../../assets/lemon_dessert.jpg'
+import LemonDessert from '../../../assets/LemonDessert.jpg'
 import ChickenPizza from '../../../assets/chicken_pizza.jpg'
 import VegPizza from '../../../assets/veg_pizza.jpg'
 import Pasta from '../../../assets/pasta.jpg'
@@ -20,7 +20,7 @@ export const dishData = {
       dishDescription: `Our Bruschetta is made from grilled 
               bread that has been smeared with garlic 
               and seasoned with salt and olive oil.`,
-      dishImage: {Bruschetta}
+      dishImage: Bruschetta
     },
     lemonDessert:{
       dishName: 'Lemon Dessert',
@@ -28,7 +28,7 @@ export const dishData = {
       dishDescription: `This comes straight from grandma's recipe book, 
               every last ingredient has been sourced and is as 
               authentic as can be imagined.`,
-      dishImage: {LemonDessert}
+      dishImage: LemonDessert
     },
     chickenPizza:{
       dishName: 'Chicken Pizza',
@@ -36,14 +36,14 @@ export const dishData = {
       dishDescription: `Made in-house, American Chicken Pizza has a robust, 
               gratifying flavour, with tender, seasoned chicken, 
               molten mozzarella, and tangy tomato sauce on a crispy crust.`,
-      dishImage: {ChickenPizza}
+      dishImage: ChickenPizza
     },
     vegPizza:{
       dishName: 'Vegetarian Pizza',
       dishPrice: 7.00,
       dishDescription: `A crispy, hand-tossed crust encases a plethora of fresh vegetables, 
               creamy tomato sauce, and mozzarella cheese in this vegetarian pizza.`,
-      dishImage: {VegPizza}
+      dishImage: VegPizza
     },
     pasta:{
       dishName: 'Red Sauce Pasta',
@@ -51,6 +51,6 @@ export const dishData = {
       dishDescription: `Our Red Sauce Pasta is prepared by tossing 
               al dente pasta with a flavourful tomato sauce 
               that has been seasoned with herbs and spices.`,
-      dishImage: {Pasta}
+      dishImage: Pasta
     },
 }

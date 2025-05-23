@@ -8,7 +8,7 @@ function footer() {
     <footer className='footerContainer'>
         <section className="footerContent">
             <article className='footerImage'>
-                <img src={logo} alt ></img>
+                <img src={logo} alt='Little Lemon' ></img>
             </article>
             <nav className='footerNav'>
                 <h3>Doormat Navigation</h3>
